@@ -2,9 +2,18 @@
 <html>
 <head>
     <title>Indian Income Tax Calculator</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div class="box1">
     <h1>Indian Income Tax Calculator</h1>
+    </div>
+
+    <label for="taxRegime">Select Tax Regime:</label>
+    <select id="taxRegime">
+        <option value="old">Old Tax Regime</option>
+        <option value="new">New Tax Regime</option>
+    </select>
 
     <label for="income">Enter your annual income (INR): </label>
     <input type="number" id="income" placeholder="Enter your income" />
@@ -31,15 +40,13 @@
     <label for="section80TTA">Deduction under Section 80TTA (Savings Account Interest) (INR): </label>
     <input type="number" id="section80TTA" placeholder="Enter deduction under Section 80TTA" />
 
-    <label for="taxRegime">Select Tax Regime:</label>
-    <select id="taxRegime">
-        <option value="old">Old Tax Regime</option>
-        <option value="new">New Tax Regime</option>
-    </select>
+
 
     <button onclick="calculateTax()">Calculate Tax</button>
-
+    
     <p id="result"></p>
+    
+    
 
     <script>
         function calculateTax() {
