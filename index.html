@@ -2,9 +2,19 @@
 <html>
 <head>
     <title>Indian Income Tax Calculator</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    
     <h1>Indian Income Tax Calculator</h1>
+   <div class="maincont"> 
+<div class="cal">
+    <label for="taxRegime">Select Tax Regime:</label>
+    <select id="taxRegime" onchange="handleOnChangeDropdown()">
+
+        <option value="old">Old Tax Regime</option>
+        <option value="new">New Tax Regime</option>
+    </select>
 
     <label for="income">Enter your annual income (INR): </label>
     <input type="number" id="income" placeholder="Enter your income" />
@@ -31,17 +41,41 @@
     <label for="section80TTA">Deduction under Section 80TTA (Savings Account Interest) (INR): </label>
     <input type="number" id="section80TTA" placeholder="Enter deduction under Section 80TTA" />
 
-    <label for="taxRegime">Select Tax Regime:</label>
-    <select id="taxRegime">
-        <option value="old">Old Tax Regime</option>
-        <option value="new">New Tax Regime</option>
-    </select>
+
 
     <button onclick="calculateTax()">Calculate Tax</button>
-
+    
     <p id="result"></p>
+    
+</div>
+<div class="suggest">
+    <h2>Suggestions:</h2>
+    <b>1: Retirement Plans (401(k), IRA, RRSP, EPF):</b> <p>Many countries offer tax deductions or exemptions for contributions made to retirement plans. These plans allow individuals to save for retirement while reducing their taxable </p>
 
+    <b>2:Health Savings Accounts (HSA) and Medical Reimbursement:</b><p> Contributions to HSAs in the United States and similar medical reimbursement schemes in other countries are often tax-deductible. These funds can be used to cover qualified medical</p>
+    
+    <b>3:Education Savings Accounts (529 Plans, RESP):</b> <p>Governments provide tax benefits for contributions made to education savings accounts. These accounts help families save for their children's education expenses.</p>
+    
+   <b>4: Homeownership Benefits:</b> <p>Mortgage interest deductions and property tax deductions are common tax-saving incentives for homeowners. Some countries also offer first-time homebuyer credits.</p>
+    
+    <b>5:Investment Incentives:</b> <p>Some governments offer tax incentives for investments in specific sectors, such as renewable energy, startups, or rural development. These incentives can include tax credits, deductions, or reduced tax rates</p>
+</div>
+</div>
     <script>
+
+        function handleOnChangeDropdown(e){
+            function handleOnChangeDropdown() {
+    // Get the selected value from the dropdown
+    var selectedValue = document.getElementById("taxRegime").value;
+
+    // Clear the label and input field
+    document.getElementById("income").value = "";
+    document.getElementById("cea").value = "";
+    document.getElementById("cha").value = "";
+
+                
+        }  
+    }      
         function calculateTax() {
             const income = parseFloat(document.getElementById('income').value);
             const taxRegime = document.getElementById('taxRegime').value;
@@ -91,7 +125,7 @@
                     { min: 1000001, max: Infinity, rate: 0.2 }
                 ];
             }
-
+2
             let tax = 0;
 
             for (const slab of taxSlabs) {

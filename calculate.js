@@ -1,3 +1,24 @@
+document.getElementById('taxRegime').addEventListener('change', function()
+    {
+        var selectedOption = this.value;
+        var contentOption1 = document.getElementById('content-old');
+        var contentOption2 = document.getElementById('content-new');
+
+            if (selectedOption === 'content-old')
+            {
+                contentOption1.style.display = 'block';
+                contentOption2.style.display = 'none' ;
+            }
+            else if (selectOption === 'content-new')
+            {
+                contentOption1.style.display = 'none';
+                contentOption2.style.display = 'block';
+
+            }
+        
+            }
+);
+
 function calculateTax() {
     const income = parseFloat(document.getElementById('income').value);
     const taxRegime = document.getElementById('taxRegime').value;

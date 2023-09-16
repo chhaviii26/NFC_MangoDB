@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Indian Income Tax Calculator</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20;
+            padding: 100%;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            margin: 0;
+        }
+
+        .container {
+            width: 5px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Indian Income Tax Calculator</h1>
+
+    <div class="container">
+        <label for="income">Enter your annual income (INR):</label>
+        <input type="number" id="income" placeholder="Enter your income" />
+
+        <label for="taxRegime">Select Tax Regime:</label>
+        <select id="taxRegime">
+            <option value="old">Old Tax Regime</option>
+            <option value="new">New Tax Regime</option>
+        </select>
+        <div id="content-old">
+        
+        <label for="cea">Children Education Allowance (CEA) (INR):</label>
+        <input type="number" id="cea" placeholder="Enter CEA" />
+
+        <label for="cha">Children Hostel Allowance (CHA) (INR):</label>
+        <input type="number" id="cha" placeholder="Enter CHA" />
+
+        <label for="section24">Deduction under Section 24 (Home Loan Interest) (INR):</label>
+        <input type="number" id="section24" placeholder="Enter deduction under Section 24" />
+
+        <label for="section80CCD1B">Deduction under Section 80CCD(1B) (NPS) (INR):</label>
+        <input type="number" id="section80CCD1B" placeholder="Enter deduction under Section 80CCD(1B)" />
+
+        <label for="section80E">Deduction under Section 80E (Education Loan Interest) (INR):</label>
+        <input type="number" id="section80E" placeholder="Enter deduction under Section 80E" />
+
+        <label for="section80EE">Deduction under Section 80EE (Home Loan Interest) (INR):</label>
+        <input type="number" id="section80EE" placeholder="Enter deduction under Section 80EE" />
+
+        <label for="section80TTA">Deduction under Section 80TTA (Savings Account Interest) (INR):</label>
+        <input type="number" id="section80TTA" placeholder="Enter deduction under Section 80TTA" />
+
+        </div>
+        <div id="content-new"></div>
+        <button onclick="calculateTax()">Calculate Tax</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script src="./calculate.js"></script>
+</body>
+</html>
+
