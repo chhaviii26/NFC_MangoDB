@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family: Arial;
     margin: 70;
@@ -96,4 +97,86 @@ button:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+=======
+body {
+    font-family: Arial;
+    margin: 70;
+    padding: 10;
+    padding-left: 30px;
+    background-color: #f4f4f4;
+}
+
+.box1{
+    background-color: #333;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 30px;
+    margin: 35px;
+}
+
+.container {
+    max-width: 30px;
+    margin: 50 auto;
+    padding: 10px;
+    padding-left: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    padding-left: 2px;
+}
+
+input[type="number"] {
+    width: 30%;
+    padding: 10px;
+    padding-left: 30px;
+    margin-bottom: 40px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+select {
+    width: 33.3%;
+    padding: 10px;
+    padding-left: 30px;
+    margin-bottom: 40px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    display: block;
+    width: 32%;
+    padding: 17px;
+    padding-left: 30px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+   margin-left: 400px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#result {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    padding-left: 30px;
+    font-weight: bold;
+    text-align: center;
+>>>>>>> 2a92046b85080582cf8ec43c743d991b5c0b573b
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Reset some default browser styles */
 body, p, ul, li, a {
     margin-left: 20px;
@@ -49,3 +50,56 @@ a:hover {
     color: #004499;
 }
 
+=======
+/* Reset some default browser styles */
+body, p, ul, li, a {
+    margin-left: 20px;
+    padding: 20;
+}
+h1 {
+    text-align: center;
+}
+
+
+/* Basic styling for the body */
+body {
+    font-family: Arial;
+    background-color: #f0f0f0;
+    margin-left: 20px;
+    padding: 20;
+}
+
+/* Header styling */
+header {
+    background-color: #d7cfcf;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+   
+}
+
+/* Navigation styling */
+nav {
+    margin: 20px;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #0077cc;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #004499;
+}
+
+>>>>>>> 2a92046b85080582cf8ec43c743d991b5c0b573b
